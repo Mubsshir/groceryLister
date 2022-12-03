@@ -2,12 +2,13 @@ import Item from './components/Item';
 import './App.css';
 import { useState } from 'react';
 import { useRef } from 'react';
-
+//let initialAlert = { msg: "", type: "" };
 const App = () => {
   const [value, setValue] = useState("");
   const [items, setItems] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [EditId, setEditId] = useState(null);
+  // const [alert, setAlert] = useState(initialAlert);
   const itemRef = useRef();
   const itemSubmitHandler = (e) => {
     e.preventDefault();
@@ -24,7 +25,6 @@ const App = () => {
       }))
       setValue("");
       setIsEditing(false)
-      return;
     }
     let id = Math.floor(Math.random() * 1000);
     setItems(prev => [{ id: id + 1, item: item }, ...prev]);
@@ -40,12 +40,14 @@ const App = () => {
     setIsEditing(true);
     setValue(item);
     setEditId(id);
-
   }
+
+
   return (
     <main className="App">
       <section className='Card'>
         <h3 className="heading">Grocery List</h3>
+
         <form onSubmit={itemSubmitHandler}>
           <input
             ref={itemRef}

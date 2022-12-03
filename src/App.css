@@ -21,12 +21,29 @@
   text-transform: capitalize;
   font-size: 30px;
   letter-spacing: 2px;
+  margin: 10px 0;
+}
+.alert {
+  height: 25px;
+  font-size: 16px;
+  margin: 0;
+  margin-top: 10px;
+  width: 80%;
+  padding: 2px;
+  border-radius: 5px;
+}
+.alert.success {
+  background-color: rgba(0, 128, 0, 0.281);
+}
+.alert.error {
+  background-color: rgba(209, 27, 27, 0.315);
 }
 .App form {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
   padding: 0;
 }
 .App form input,
@@ -68,7 +85,14 @@
 
 @media screen and (max-width: 720px) {
   .App .Card {
-    width: 80%;
+    width: 95%;
+    padding: 5px;
+    margin: 5px 0;
+  }
+  .App .Card form {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
   }
   .App .Card Form button {
     margin: 0 10px;
