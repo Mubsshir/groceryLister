@@ -10,40 +10,58 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin: 100px 0;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
   padding: 10px 20px;
   border-radius: 10px;
   background-color: white;
+  height: auto;
+  transition: all 0.5s linear;
 }
 .App .heading {
-  color: rgb(235, 125, 0);
+  text-transform: capitalize;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: green;
   text-transform: capitalize;
   font-size: 30px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin: 10px 0;
 }
+.tomato {
+  font-size: 40px;
+  margin-left: 5px;
+  color: red;
+}
 .alert {
-  height: 25px;
+  height: 30px;
   font-size: 16px;
+  font-weight: 900;
   margin: 0;
   margin-top: 10px;
-  width: 80%;
-  padding: 2px;
+  width: 60%;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 .alert.success {
   background-color: rgba(0, 128, 0, 0.281);
 }
 .alert.error {
-  background-color: rgba(209, 27, 27, 0.315);
+  background-color: rgba(236, 43, 43, 0.589);
+  color: white;
 }
 .App form {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  margin: 20px 0;
   padding: 0;
 }
 .App form input,
@@ -91,8 +109,6 @@
   }
   .App .Card form {
     width: 100%;
-    margin: 0;
-    margin-top: 20px;
   }
   .App .Card Form button {
     margin: 0 10px;

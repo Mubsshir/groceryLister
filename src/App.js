@@ -1,4 +1,5 @@
 import Item from './components/Item';
+import { GiTomato } from 'react-icons/gi'
 import './App.css';
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
@@ -41,6 +42,7 @@ const App = () => {
     setValue(e.target.value)
   }
   const handleDelete = (id) => {
+    setAlert({ show: true, msg: "Item Removed", type: "success" })
     setItems(prev => prev.filter(item => item.id !== id));
   }
   const handleEdit = (item, id) => {
@@ -61,7 +63,7 @@ const App = () => {
   return (
     <main className="App">
       <section className='Card'>
-        <h3 className="heading">Grocery List</h3>
+        <h3 className="heading">Grocery List <GiTomato className='tomato' /></h3>
         {alert.show && <Alert list={items} data={alert} />}
         <form onSubmit={itemSubmitHandler}>
           <input

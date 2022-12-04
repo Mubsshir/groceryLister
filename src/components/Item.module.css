@@ -5,10 +5,15 @@
   width: 80%;
   padding: 5px 10px;
   background-color: rgba(209, 209, 209, 0.589);
-  margin: 20px 0;
+  margin-bottom: 5px;
   border-radius: 5px;
+  animation: entry 0.4s linear;
+  position: relative;
 }
 
+.ItemCard.out {
+  animation: out 0.5s ease-in;
+}
 .ItemCard .btn {
   display: flex;
   align-items: center;
@@ -32,9 +37,55 @@
   color: black;
   font-weight: 700;
   letter-spacing: 1px;
+  margin: 0;
 }
 @media screen and (max-width: 720px) {
   .ItemCard {
     width: 100%;
+  }
+}
+@keyframes entry {
+  0% {
+    left: -500px;
+    opacity: 0.2;
+  }
+  25% {
+    left: -250px;
+    opacity: 0.4;
+  }
+  50% {
+    left: -150px;
+    opacity: 0.6;
+  }
+  75% {
+    left: -50px;
+    opacity: 0.8;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes out {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  25% {
+    right: -50px;
+    opacity: 0.8;
+  }
+  50% {
+    right: -150px;
+    opacity: 0.6;
+  }
+  75% {
+    right: -250px;
+    opacity: 0.4;
+  }
+  100% {
+    right: -500px;
+    opacity: 0;
   }
 }
